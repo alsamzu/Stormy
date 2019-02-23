@@ -1,20 +1,11 @@
-package com.example.stormy;
+package com.example.stormy.weather;
 
-public class Hour {
-    private String mSummary;
+public class Day {
     private long mTime;
-    private double mTemperature;
+    private String mSummary;
+    private double mTemperatureMax;
     private String mIcon;
-    private String  mTimezone;
-
-
-    public String getSummary() {
-        return mSummary;
-    }
-
-    public void setSummary(String summary) {
-        mSummary = summary;
-    }
+    private String mTimezone;
 
     public long getTime() {
         return mTime;
@@ -24,12 +15,20 @@ public class Hour {
         mTime = time;
     }
 
-    public double getTemperature() {
-        return mTemperature;
+    public String getSummary() {
+        return mSummary;
     }
 
-    public void setTemperature(double temperature) {
-        mTemperature = temperature;
+    public void setSummary(String summary) {
+        mSummary = summary;
+    }
+
+    public double getTemperatureMax() {
+        return mTemperatureMax;
+    }
+
+    public void setTemperatureMax(double temperatureMax) {
+        mTemperatureMax = temperatureMax;
     }
 
     public String getIcon() {

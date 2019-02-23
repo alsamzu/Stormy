@@ -1,10 +1,12 @@
-package com.example.stormy;
+package com.example.stormy.weather;
+
+import com.example.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CurrentWeather {
+public class Current {
 
     private String mIcon;
     private long mTime;
