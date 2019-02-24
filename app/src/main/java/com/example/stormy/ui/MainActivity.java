@@ -213,8 +213,27 @@ public class MainActivity extends AppCompatActivity {
         return hours;
     }
 
-    private Day[] getDailyForecast(String jsonData) {
-        return new Day[0];
+    private Day[] getDailyForecast(String jsonData) throws Exception {
+        JSONObject forecast = new JSONObject(jsonData);
+        String timezone = forecast.getString("timezone");
+
+        JSONObject daily = forecast.getJSONObject("daily");
+        JSONArray data = daily.getJSONArray("data");
+        Day [] days = new Day[data.length()];
+        for (int i =0; i<data.length();i++){
+            JSONObject jsonDay = data.getJSONObject(i);
+
+            Day day = new Day();
+
+            day.setIcon(jsonDay.getString("icon"));
+            day.setTemperatureMax(jsonDay.getDouble("temperatureMax"));
+            day.setSummary(jsonDay.getString("summary"));
+            day.setTime(jsonDay.getLong("time"));
+            day.setTimezone(timezone);
+
+            days[i]=day;
+        }
+          return days;
     }
 
     private Current getCurrentDetails(String jsonData) throws JSONException {

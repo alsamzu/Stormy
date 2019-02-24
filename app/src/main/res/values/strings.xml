@@ -22,5 +22,5 @@
     <string name="daily_forecast_title">This Week\'s Weather</string>
     <string name="hardcoded_location_label">Portland, OR</string>
     <string name="content_desc_refresh">Refresh Button</string>
-    <string name="content_desc_degree_sign">degrees</string>
+    <string name="content_desc_degree_sign">Degree Sign</string>
 </resources>
